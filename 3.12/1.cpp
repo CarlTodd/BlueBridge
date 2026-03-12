@@ -1,3 +1,4 @@
+//Âå¹È P1451,BFSÔÚµØÍ¼ÉÏ£¬¸´Ï°
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -21,10 +22,12 @@ int main()
     {
         for (int j = 0; j < m; j++)
         {
-            if (!visited[i][j])
+            if (!visited[i][j]&& matrix[i][j] != '0')
             {
                 int now = matrix[i][j];
+                int num = 1;
                 q.push({ i, j });
+                visited[i][j] = 1;
                 while (!q.empty())
                 {
                     int x = q.front().first;
@@ -35,14 +38,18 @@ int main()
                     {
                         int ax = dir[k].first;
                         int ay = dir[k].second;
-                        if (!visited[x + ax][y + ay] && matrix[x + ax][y + ay] == now)
+                        if (x+ax>-1&&x+ax<n&&y+ay>-1&&y+ay<m&& !visited[x + ax][y + ay] && matrix[x + ax][y + ay] ==now)
                         {
                             q.push({ x + ax, y + ay });
+                            visited[x + ax][y + ay] = 1;
+                            num++;
                         }
                     }
                 }
-                ans++;
+                if(num>1)
+                    ans++;
             }
         }
     }
+    cout << ans << endl;
 }
