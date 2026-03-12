@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{7d3871ca-6b94-4f2c-bce5-77eb4914e2cc}</ProjectGuid>
-    <RootNamespace>背包DP</RootNamespace>
+    <ProjectGuid>{4e78d780-e5ef-4e7c-b616-51320493982e}</ProjectGuid>
+    <RootNamespace>数位DP</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>金明的预算方案（树上背包）</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
