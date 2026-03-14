@@ -1,4 +1,17 @@
 //oiwiki Compress Words (hash's application) 1.5h
+/*
+1. 效率问题：查询太慢 (TLE)
+解决： 预处理幂次数组 p[i] = B^i % M，查询时直接取 p[len]
+2. 重复计算：每次二分都算一遍哈希
+错误： 在 check 函数里反复调用 add_hash 计算整个新串。
+解决： 对新串 add 预处理前缀哈希数组
+3. 内存搬运：错误的字符串拼接
+错误： ans = ans + ... 会频繁申请内存并拷贝
+解决： 使用 push_back 逐字符拼接，并同步动态更新 ans 的哈希值。
+4. 数学错误：负数取模
+错误： hash1 - hash2 可能为负，C++ % 运算符会保留负号。
+解决： 统一使用 (res % M + M) % M 确保结果为正。
+*/
 #include<iostream>
 #include<string>
 #include<vector>
