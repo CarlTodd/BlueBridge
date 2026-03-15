@@ -27,21 +27,12 @@
     <ClCompile Include="4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="5.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="6.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="7.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="prefix and KMP.md">
+    <None Include="2.md">
       <Filter>源文件</Filter>
     </None>
-    <None Include="manacher.md">
+    <None Include="01BFS.md">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>
